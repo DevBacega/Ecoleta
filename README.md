@@ -1,4 +1,4 @@
-# Ecolab
+# Ecoleta
 Projeto da Next Level Week 1.0
 
 ## 1º Aula
