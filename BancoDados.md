@@ -83,3 +83,22 @@ usamos o comando:
 
     npx knex migrate:latest --knexfile knexfile.ts migrate:latest
    *Obs: você pode criar um script no ***package.json*** para executar esse comando mais rápido*
+
+
+## Select usando o Knex
+
+ 
+Com o Knex podemos padronizar os Selects feito no banco de dados, não importando qual seja o seu tipo, MySql, SqlServer, Oracle, Sqlite entre outros.
+Um exemplo de select com o Knex é exibido a baixo, neste select, estamos selecionando todos os pontos da tabela Points fazendo um Inne Join com a tabela Point_items e usando um filtro com a clausula Where, e colocando um Distinct no final para não repetirmos os dados, pois o mesmo ponto pode ter varios items, e com isso iriamos repetir o ponto.
+
+     const points = await knex('points')
+          .join('point_items', 'points.id', '=', 'point_items.point_id')
+          .whereIn('point_items.item_id', parsedItems)
+          .where('city', String(city))
+          .where('uf', String(uf))
+          .distinct()
+          .select('points.*');
+
+# Conclusão
+
+O Knex é uma maravilhosa ferramenta para gerar banco de dados, fazer manipulação de dados e extração de dados no banco, pois com ele padronizamos as Querys e deixamos nosso sistema desacoplado ao banco de dados, caso algum dia o banco mude de SQLite3 para MySql ou ORACLE, basta mudarmos a String Cliente no Knexfile e na Connection que tudo continua a funcionar perfeitamente.
