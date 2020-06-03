@@ -19,7 +19,8 @@ Ordeno que o express comece a entender e usar .json
   **PUT:** Atualizar uma informação existente no Back-End
 <br>
   **DELETE:** Remover uma informação do Back-end
-<br>
+
+## Forma da Rota
 As rotas por padrão contem 1 Recurso e 1 função com 2 parametros.
 <br>
 **Recurso:** Qual entidade estamos acessando do sistema.
@@ -34,8 +35,7 @@ As rotas por padrão contem 1 Recurso e 1 função com 2 parametros.
 **Query Param:** São parâmetros que vem na própria rota que geralmente são opcionais para filtros, paginação.
 <br>
 **Request Body:** Parâmetros para criação e atualização de informações.
-&nbsp;
-
+<br>
 ```Javascript
 const users = [
     'Diego',   
