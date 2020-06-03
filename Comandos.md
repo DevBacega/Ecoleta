@@ -12,10 +12,9 @@
 ### Comandos para Instalar Libs
 - **npm install express**
     Instala a LIB de Rotas do Node.JS
-- **npm install knex**
-    Instala o banco Knex
-- **npm install sqlite3**
-    Instala o SQLite3 no Node
+- **npm install cors**
+    Permite que sua API seja acessada por links externos.
+
 ### Comandos Typescripts
 - **npm install typescript**
     Instala o Typescript no node para ser usado.
@@ -27,8 +26,17 @@
     Cria o arquivo de configuração do Typescript
 - **npm install ts-node-dev**
     Comando para instalar o observador de modificação doss arquivos, para que sejam recarregados automaticamente.
-- **ts-node-dev "./path-of-file/file.ts"**
+- **ts-node-dev --ignore node_modules "./path-of-file/file.ts"**
     Executa o arquivo .TS e deixa o servidor ficar monitorando as mudanças.
+
+### Comandos do Banco Knex
+- **npm install knex**
+    Instala o banco Knex
+- **npm install sqlite3**
+    Instala o SQLite3 no Node
+- **npx knex --knexfile "caminho do knexfile.ts migrate:latest"**
+    Executa as Migrations da pasta, usando o arquivo de conexão knexfile
+
 
 
 
