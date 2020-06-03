@@ -35,7 +35,6 @@ As rotas por padrão contem 1 Recurso e 1 função com 2 parametros.
 **Query Param:** São parâmetros que vem na própria rota que geralmente são opcionais para filtros, paginação.
 <br>
 **Request Body:** Parâmetros para criação e atualização de informações.
-<br>
 ```Javascript
 const users = [
     'Diego',   
@@ -45,8 +44,8 @@ const users = [
     'Pudim'    
 ];
 ```
-<br>
 **Criando uma rota Get**
+
 ```Javascript
 app.get('/users', (request, response) => {
     //Converte em String a Query envianda pelo Recurso da rota.
