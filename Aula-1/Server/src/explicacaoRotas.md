@@ -37,7 +37,7 @@ As rotas por padrão contem 1 Recurso e 1 função com 2 parametros.
 **Request Body:** Parâmetros para criação e atualização de informações.
 &nbsp;
 
-```
+```Javascript
 const users = [
     'Diego',   
     'Creiton', 
@@ -49,7 +49,7 @@ const users = [
 
 **Criando uma rota Get**
 
-```
+```Javascript
 app.get('/users', (request, response) => {
     //Converte em String a Query envianda pelo Recurso da rota.
     const search = String(request.query.search);
@@ -62,7 +62,7 @@ app.get('/users', (request, response) => {
     response.json(filteredUsers);
 });
 ```
-
+&nbsp;
 **Criando uma rota GET com ID**
 ```Javascript
 app.get('/users/:id', (request,response) => {
@@ -72,6 +72,7 @@ app.get('/users/:id', (request,response) => {
   return response.json(user);
 });
 ```
+&nbsp;
 **Criando uma rota Post**
 ```Javascript
 app.post('/users', (request,response) => {
@@ -83,8 +84,8 @@ app.post('/users', (request,response) => {
     return response.json(user);
 });
 ```
-
-
+&nbsp;
 Comando para indicar que essa API está sendo executada na rota 3333
+&nbsp;
 `app.listen(3333);`
 
