@@ -2,10 +2,13 @@
 
 ## Imports e Configuração dos Imports.
 Importa a biblioteca 'Express' do Node
+&nbsp;
 `import express from 'express';`
+&nbsp;
 `const app = express();`
 
 Ordeno que o express comece a entender e usar .json
+&nbsp;
 `app.use(express.json());`
 
 ## Tipos de Rotas:
@@ -61,7 +64,7 @@ app.get('/users', (request, response) => {
 ```
 
 **Criando uma rota GET com ID**
-```
+```Javascript
 app.get('/users/:id', (request,response) => {
 //Converte o parametro(params) passado dentro do RECURSO da rota (Nesse caso o :id) para INT
   const id = Number(request.params.id);
@@ -70,7 +73,7 @@ app.get('/users/:id', (request,response) => {
 });
 ```
 **Criando uma rota Post**
-```
+```Javascript
 app.post('/users', (request,response) => {
     const data = request.body;
     const user = {
