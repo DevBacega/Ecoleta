@@ -29,7 +29,7 @@ As rotas por padrão contem 1 Recurso e 1 função com 2 parametros.
 <br>
 **Response:** Resposta da API para o usuario.
 <br>
-<br>
+## Parametros da Rota.
 **Request Param:** Parâmetros que vem na própria rota que indentificam um recurso.
 <br>
 **Query Param:** São parâmetros que vem na própria rota que geralmente são opcionais para filtros, paginação.
@@ -59,7 +59,6 @@ app.get('/users', (request, response) => {
     response.json(filteredUsers);
 });
 ```
-<br>
 **Criando uma rota GET com ID**
 ```Javascript
 app.get('/users/:id', (request,response) => {
@@ -69,7 +68,6 @@ app.get('/users/:id', (request,response) => {
   return response.json(user);
 });
 ```
-<br>
 **Criando uma rota Post**
 ```Javascript
 app.post('/users', (request,response) => {
@@ -81,7 +79,6 @@ app.post('/users', (request,response) => {
     return response.json(user);
 });
 ```
-<br>
 Comando para indicar que essa API está sendo executada na rota 3333
 <br>
 `app.listen(3333);`
