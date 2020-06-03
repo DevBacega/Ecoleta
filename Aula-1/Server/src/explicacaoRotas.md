@@ -2,26 +2,37 @@
 
 ## Imports e Configuração dos Imports.
 Importa a biblioteca 'Express' do Node
-"import express from 'express';"
-"const app = express();"
+`import express from 'express';`
+`const app = express();`
 
 Ordeno que o express comece a entender e usar .json
-"app.use(express.json());"
+`app.use(express.json());`
 
 ## Tipos de Rotas:
   **GET:** Buscar uma ou mais informações do back-end 
+  &nbsp;
   **POST:** Criar uma nova informação no Back-End
+  &nbsp;
   **PUT:** Atualizar uma informação existente no Back-End
+  &nbsp;
   **DELETE:** Remover uma informação do Back-end
+  &nbsp;
 
 As rotas por padrão contem 1 Recurso e 1 função com 2 parametros.
+&nbsp;
 **Recurso:** Qual entidade estamos acessando do sistema.
+&nbsp;
 **Request:** Tudo aquilo que o usuario esta requisitando.
+&nbsp;
 **Response:** Resposta da API para o usuario.
+&nbsp;
 
 **Request Param:** Parâmetros que vem na própria rota que indentificam um recurso.
+&nbsp;
 **Query Param:** São parâmetros que vem na própria rota que geralmente são opcionais para filtros, paginação.
+&nbsp;
 **Request Body:** Parâmetros para criação e atualização de informações.
+&nbsp;
 
 ```
 const users = [
@@ -72,5 +83,5 @@ app.post('/users', (request,response) => {
 
 
 Comando para indicar que essa API está sendo executada na rota 3333
-*app.listen(3333);*
+`app.listen(3333);`
 
