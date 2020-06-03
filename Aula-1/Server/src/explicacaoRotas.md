@@ -2,41 +2,39 @@
 
 ## Imports e Configuração dos Imports.
 Importa a biblioteca 'Express' do Node
-&nbsp;
+<br>
 `import express from 'express';`
-&nbsp;
+<br>
 `const app = express();`
-
+<br>
 Ordeno que o express comece a entender e usar .json
-&nbsp;
+<br>
 `app.use(express.json());`
 
 ## Tipos de Rotas:
   **GET:** Buscar uma ou mais informações do back-end 
-  &nbsp;
+<br>
   **POST:** Criar uma nova informação no Back-End
-  &nbsp;
+<br>
   **PUT:** Atualizar uma informação existente no Back-End
-  &nbsp;
+<br>
   **DELETE:** Remover uma informação do Back-end
-  &nbsp;
 
+## Forma da Rota
 As rotas por padrão contem 1 Recurso e 1 função com 2 parametros.
-&nbsp;
+<br>
 **Recurso:** Qual entidade estamos acessando do sistema.
-&nbsp;
+<br>
 **Request:** Tudo aquilo que o usuario esta requisitando.
-&nbsp;
+<br>
 **Response:** Resposta da API para o usuario.
-&nbsp;
-
+<br>
+## Parametros da Rota.
 **Request Param:** Parâmetros que vem na própria rota que indentificam um recurso.
-&nbsp;
+<br>
 **Query Param:** São parâmetros que vem na própria rota que geralmente são opcionais para filtros, paginação.
-&nbsp;
+<br>
 **Request Body:** Parâmetros para criação e atualização de informações.
-&nbsp;
-
 ```Javascript
 const users = [
     'Diego',   
@@ -46,7 +44,6 @@ const users = [
     'Pudim'    
 ];
 ```
-
 **Criando uma rota Get**
 
 ```Javascript
@@ -62,7 +59,6 @@ app.get('/users', (request, response) => {
     response.json(filteredUsers);
 });
 ```
-&nbsp;
 **Criando uma rota GET com ID**
 ```Javascript
 app.get('/users/:id', (request,response) => {
@@ -72,7 +68,6 @@ app.get('/users/:id', (request,response) => {
   return response.json(user);
 });
 ```
-&nbsp;
 **Criando uma rota Post**
 ```Javascript
 app.post('/users', (request,response) => {
@@ -84,8 +79,7 @@ app.post('/users', (request,response) => {
     return response.json(user);
 });
 ```
-&nbsp;
 Comando para indicar que essa API está sendo executada na rota 3333
-&nbsp;
+<br>
 `app.listen(3333);`
 
