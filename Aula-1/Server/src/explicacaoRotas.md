@@ -2,9 +2,9 @@
 
 ## Imports e Configuração dos Imports.
 Importa a biblioteca 'Express' do Node
-&nbsp;
+<br>
 `import express from 'express';`
-&nbsp;
+<br>
 `const app = express();`
 
 Ordeno que o express comece a entender e usar .json
