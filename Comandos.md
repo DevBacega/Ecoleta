@@ -44,6 +44,12 @@
 
 - **npx create-react-app "nome do projeto" --template=typescript**
     Cria um projeto React dentro da pasta com o "nome do projeto" com o template do typescript embutido.
+- **npm install react-icons**
+    Instala os pacotes de Icones mais famoso da internet.
+- **npm install react-router-dom**
+    Instala o pacote de rotas do React
+- **npm install leaflet react-leaflet**
+    Biblioteca para manipulação de mapa geografico open source.
 
 
 
