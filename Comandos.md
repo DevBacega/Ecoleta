@@ -52,5 +52,27 @@
     Biblioteca para manipulação de mapa geografico open source.
 
 
+## Mobile Expo
 
-
+- **yarn add global expo-cli**
+    Instala o Expo como Global, assim temos acesso em qualquer parte do PC
+- **expo install expo-font**
+    Instalação do expo-font.
+- **expo @expo-google-fonts/'fonte desejada**
+    Comando para instalar fontes no Expo
+- **yarn add @react-navigation/native**
+    Lib para criar as rotas no react native
+- **expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view**
+ Instala as libs de interação do usuario.
+ - **yarn add @react-navigation/stack**
+ Lib para fazer o caminho das rotas no Native
+- **expo install react-native-maps**
+Lib para usar mapas no React Native
+-**expo install expo-constants**
+PESQUISAR
+-**expo install react-native-svg**
+Lib para o React Native conseguir ler SVG
+-**expo install expo-location**
+Biblioteca para usar geolocalização no app
+-**expo install expo-mail-composer**
+Lib para trabalhar com Email.
