@@ -9,11 +9,16 @@
 - **npx ts-node './path-of-file/file.ts**
     Faz o node executar um arquivo .TS.
     *Obs: Necessita fazer a instalação e configuração do Typescript no Node*
+
 ### Comandos para Instalar Libs
 - **npm install express**
     Instala a LIB de Rotas do Node.JS
 - **npm install cors**
     Permite que sua API seja acessada por links externos.
+- **npm install multer**
+    Lib para fazer upload de arquivos.
+- **npm install celebrate**
+    Lib para fazer validação de campos no back-end
 
 ### Comandos Typescripts
 - **npm install typescript**
@@ -63,16 +68,16 @@
 - **yarn add @react-navigation/native**
     Lib para criar as rotas no react native
 - **expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view**
- Instala as libs de interação do usuario.
- - **yarn add @react-navigation/stack**
- Lib para fazer o caminho das rotas no Native
+    Instala as libs de interação do usuario.
+- **yarn add @react-navigation/stack**
+    Lib para fazer o caminho das rotas no Native
 - **expo install react-native-maps**
-Lib para usar mapas no React Native
+    Lib para usar mapas no React Native
 -**expo install expo-constants**
-PESQUISAR
+    PESQUISAR
 -**expo install react-native-svg**
-Lib para o React Native conseguir ler SVG
+    Lib para o React Native conseguir ler SVG
 -**expo install expo-location**
-Biblioteca para usar geolocalização no app
+    Biblioteca para usar geolocalização no app
 -**expo install expo-mail-composer**
-Lib para trabalhar com Email.
+    Lib para trabalhar com Email.
