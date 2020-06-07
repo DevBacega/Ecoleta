@@ -24,10 +24,16 @@ interface IBGECityResponse{
   nome: string
 }
 
+interface Modal{
+  isOpen: boolean;
+  onClose: () => void;
+}
 
-const Modal = ({onClose}:any)  => {
-  return (
-    <div id="close" className='modal' onClick={onClose}>
+
+const Modal: React.FC<Modal> = ({isOpen, onClose}) => {
+  const history = useHistory();
+ return isOpen ? (
+    <div id="close" className='modal' onClick={() =>{history.push('/')}}>
         <div className="container">
           <FiCheckCircle size={80} />
           <p>
@@ -35,7 +41,7 @@ const Modal = ({onClose}:any)  => {
           </p>
         </div>
     </div>
-  )
+  ) : null;
 }
 
 
@@ -52,6 +58,7 @@ const CreatePoint = () => {
   const [cities, setCities] = useState<string[]>([]);
   const [initialPosition, setInitialPosition] = useState<[number,number]>([0,0]);
   const [modal, setModal] = useState(false);
+  const toggleModal = () => setModal(!modal);
 
   //Use States para armazenamento.
   const [selectedUf, setSelectedUf] =useState('0');
@@ -97,11 +104,6 @@ useEffect(() => {
       setCities(cityName);  
     }) 
   },[selectedUf])
-
-  useEffect(() =>{
-    if(modal === true)
-    setTimeout(()=>history.push('/'),3000);
-  },[])
 
 
 
@@ -267,7 +269,10 @@ useEffect(() => {
 
       <button type="submit">Cadastrar ponto de coleta.</button>
     </form>
-    {modal ? <Modal onClose={() => {setModal(false)}}/> : null}
+    <Modal 
+      isOpen={modal}
+      onClose={toggleModal}
+    />
   </div>
   
   );
