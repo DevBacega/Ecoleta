@@ -201,3 +201,33 @@
     background: #E1FAEC;
     border: 2px solid #34CB79;
   }
+
+  .modal{
+    position: fixed; /* Stay in place */
+    display: flex;
+    z-index: 20; /* Sit on top */
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Full width */
+    height: 100vh;/* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0);
+    opacity:  0.787;
+    overflow: hidden; /* Black w/ opacity */
+    justify-content: center;
+    flex-direction: column;
+    transition: all 20.5s ease;
+    
+  }
+
+  .container{
+    width: 400px;
+    color: #39ff14;
+    font-weight: bold;
+    font-size: 40px;
+    z-index: 10;
+    height: auto;
+    text-align: center;
+    margin: 40%;
+    
+  }

@@ -1,6 +1,6 @@
-import React, {useEffect, useState, ChangeEvent, FormEvent} from 'react';
+import React, {useEffect, useState, ChangeEvent, FormEvent, HTMLAttributes} from 'react';
 import {Link, useHistory} from 'react-router-dom';
-import {FiArrowLeft} from 'react-icons/fi';
+import {FiArrowLeft, FiCheckCircle} from 'react-icons/fi';
 import {Map,TileLayer, Marker} from 'react-leaflet';
 import {LeafletMouseEvent} from 'leaflet';
 import axios from 'axios';
@@ -24,6 +24,23 @@ interface IBGECityResponse{
   nome: string
 }
 
+
+const Modal = ({onClose}:any)  => {
+  return (
+    <div id="close" className='modal' onClick={onClose}>
+        <div className="container">
+          <FiCheckCircle size={80} />
+          <p>
+            Obrigado por ajudar o mundo a ser um lugar melhor.
+          </p>
+        </div>
+    </div>
+  )
+}
+
+
+
+
 const CreatePoint = () => {
 
   //array ou objeto: manualmente informar o tipo da variavel
@@ -34,7 +51,7 @@ const CreatePoint = () => {
   const [ufs, setUfs] = useState<string[]>([]);
   const [cities, setCities] = useState<string[]>([]);
   const [initialPosition, setInitialPosition] = useState<[number,number]>([0,0]);
-
+  const [modal, setModal] = useState(false);
 
   //Use States para armazenamento.
   const [selectedUf, setSelectedUf] =useState('0');
@@ -81,9 +98,10 @@ useEffect(() => {
     }) 
   },[selectedUf])
 
-
-
-
+  useEffect(() =>{
+    if(modal === true)
+    setTimeout(()=>history.push('/'),3000);
+  },[])
 
 
 
@@ -151,23 +169,23 @@ useEffect(() => {
     
 
     await api.post('points', data);
-
-    alert('Ponta de Coleta criado.');
-
-    history.push('/');
     
+    setModal(true);
   }
+
+
 
   return (
   <div id="page-create-point">
     <header>
+      <Link to ='/'>
       <img src={logo} alt="Ecoleta"/>
+      </Link>
       <Link to ='/'>
        <FiArrowLeft />
        Voltar para Home
       </Link>
     </header>
-
     <form onSubmit={handleSubmit}>
       <h1>Cadastro do <br/>
       ponto de coleta</h1>
@@ -249,7 +267,9 @@ useEffect(() => {
 
       <button type="submit">Cadastrar ponto de coleta.</button>
     </form>
+    {modal ? <Modal onClose={() => {setModal(false)}}/> : null}
   </div>
+  
   );
 }
 
