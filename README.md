@@ -1,7 +1,4 @@
-<p align="center>
 # Ecoleta
-</p>
-
 <p align="center">
   <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -11,10 +8,6 @@
 </p>
 
 <br>
-
-<p align="center">
-  <img alt="Ecoleta" src=".github/ecoleta.png" width="100%">
-</p>
 
 ## 🚀 Tecnologias
 
